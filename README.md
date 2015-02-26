@@ -1,2 +1,3 @@
-# cuplizian
-Blog of Ian Mustafa
+# Blog of Ian Mustafa
+
+http://ianmustafa.com
