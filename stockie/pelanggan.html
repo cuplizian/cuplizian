@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Stockie</title>
+<link href="style.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="dasbor.html">Stockie.</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="dasbor.html"><span class="fa fa-home"></span> Dasbor</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="fa fa-list"></span> Data <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="barang.html"><span class="fa fa-cubes"></span> Barang</a></li>
+                        <li class="divider"></li>
+                        <li><a href="supplier.html"><span class="fa fa-briefcase"></span> Supplier</a></li>
+                        <li><a href="pelanggan.html"><span class="fa fa-shopping-cart"></span> Pelanggan</a></li>
+                        <li class="divider"></li>
+                        <li><a href="user.html"><span class="fa fa-users"></span> User</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="fa fa-exchange"></span> Transaksi &amp; Laporan <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="trx-masuk.html"><span class="fa fa-download"></span> Barang Masuk</a></li>
+                        <li><a href="trx-keluar.html"><span class="fa fa-upload"></span> Barang Keluar</a></li>
+                        <li class="divider"></li>
+                        <li><a href="trx-bayar.html"><span class="fa fa-money"></span> Pembayaran</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="fa fa-user"></span> Halo, Ian <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="login.html"><span class="fa fa-sign-out"></span> Keluar</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div><!--/.nav-collapse -->
+    </div>
+</div>
+
+<div class="container">
+    <h1 class="first page-header">Data Pelanggan</h1>
+    <div class="row top">
+        <div class="col-xs-4">
+            <button class="btn btn-primary" data-toggle="modal" data-target="#formPelanggan">
+                <span class="fa fa-plus-circle fa-lg"></span> Tambah Pelanggan
+            </button>
+            <!-- <a href="barang-form.html" class="btn btn-primary btn-top"><span class="fa fa-plus-circle"></span> Tambah barang</a> -->
+        </div>
+        <div class="col-xs-4 col-xs-offset-4">
+            <form class="form form-inline pull-right" accept-charset="utf-8" method="post" role="form" action="pelanggan.html">
+                <div class="input-group">
+                    <input id="cariData" class="form-control" type="text" placeholder="Cari data" name="cari">
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" type="submit"><span class="fa fa-search fa-lg"></span></button>
+                    </span>
+                </div>
+            </form>
+        </div>
+    </div>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th width="5%">No</th>
+                <th width="25%">Nama</th>
+                <th width="32%">Alamat</th>
+                <th width="15%">Kota</th>
+                <th width="15%">Telp</th>
+                <th width="8%" colspan="2" class="text-center">Aksi</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>TOKO MUMAYA</td>
+                <td>Jl. Raya Sumberrejo 28 Sumberrejo</td>
+                <td>Bojonegoro</td>
+                <td >0353 331199</td>
+                <td width="4%" class="text-center"><a title="Ubah data ini" href="javascript:;" class="text-info"><span class="fa fa-edit fa-lg"></span></a></td>
+                <td width="4%" class="text-center"><a title="Hapus data ini" onclick="return confirm('Yakin ingin menghapus data ini?')" href="javascript:;" class="text-danger"><span class="fa fa-trash fa-lg"></span></a></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>TOKO SANTIKA</td>
+                <td>Jl. Ade Irma Suryani 12</td>
+                <td>Bojonegoro</td>
+                <td >0822 4466 8800</td>
+                <td width="4%" class="text-center"><a title="Ubah data ini" href="javascript:;" class="text-info"><span class="fa fa-edit fa-lg"></span></a></td>
+                <td width="4%" class="text-center"><a title="Hapus data ini" onclick="return confirm('Yakin ingin menghapus data ini?')" href="javascript:;" class="text-danger"><span class="fa fa-trash fa-lg"></span></a></td>
+            </tr>
+        </tbody>
+    </table>
+</div> <!-- /container -->
+
+<div class="modal fade" id="formPelanggan" tabindex="-1" role="dialog" aria-labelledby="judulForm" aria-hidden="true">
+<div class="modal-dialog">
+<div class="modal-content">
+<form action="pelanggan.html" class="form-horizontal" role="form" method="post" accept-charset="utf-8">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Batal</span></button>
+        <h4 class="modal-title" id="judulForm">Tambah Pelanggan</h4>
+    </div>
+
+    <div class="modal-body">
+        <div class="form-group">
+            <label for="inputNama" class="col-xs-2 control-label">Nama</label>
+            <div class="col-xs-10">
+                <input name="data[nama]" value="" class="form-control" id="inputNama" placeholder="Nama Pelanggan" type="text">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputAlamat" class="col-xs-2 control-label">Alamat</label>
+            <div class="col-xs-10">
+                <textarea name="data[alamat]" class="form-control" rows="3" id="inputAlamat"></textarea>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputKota" class="col-xs-2 control-label">Kota</label>
+            <div class="col-xs-4">
+                <input name="data[kota]" class="form-control" id="inputKota" placeholder="Kota" type="text">
+            </div>
+
+            <label for="inputTelepon" class="col-xs-2 control-label">Telepon</label>
+            <div class="col-xs-4">
+                <input name="data[telepon]" class="form-control" id="inputTelepon" placeholder="031 2345 6789" type="text">
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Batal</button>
+        <input name="submit" value="Tambah data pelanggan" class="btn btn-primary" type="submit">
+    </div>
+</form>
+</div>
+</div>
+</div> <!-- /modal -->
+
+<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment-with-locales.min.js"></script>
+<script type="text/javascript">
+$(function () {
+  moment.locale('id');
+
+  $('[data-toggle="popover"]')
+    .popover({
+      html: true,
+      trigger: 'focus'
+    });
+
+  new Morris.Line({
+    element: 'statistikTrx',
+    data: [
+      { date: '2014-05-08', masuk: 2, keluar: 1, bayar: 2 },
+      { date: '2014-05-09', masuk: 5, keluar: 2, bayar: 2 },
+      { date: '2014-05-10', masuk: 8, keluar: 4, bayar: 3 },
+      { date: '2014-05-11', masuk: 6, keluar: 7, bayar: 1 },
+      { date: '2014-05-12', masuk: 7, keluar: 9, bayar: 2 }
+    ],
+    ykeys: ['masuk', 'keluar', 'bayar'],
+    labels: ['Barang Masuk', 'Barang Keluar', 'Pembayaran'],
+    xkey: 'date',
+    xLabels: 'day',
+    xLabelFormat: function (date) {
+      return moment(date).format('ll');
+    },
+    hoverCallback: function (index, options, content, row) {
+      return '<div class="morris-hover-row-label">' + moment(row.date).format('ll') + '</div><div class="morris-hover-point" style="color: #0b62a4">Barang Masuk: ' + row.masuk + '</div><div class="morris-hover-point" style="color: #7A92A3">Barang Keluar: ' + row.keluar + '</div><div class="morris-hover-point" style="color: #4da74d">Pembayaran: ' + row.bayar + '</div>'
+    }
+  });
+})
+</script>
+</body>
+</html>

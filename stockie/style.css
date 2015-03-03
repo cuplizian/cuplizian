@@ -1,0 +1,142 @@
+/* Stok Gudang | Version: 0.1 */
+@import url("https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css");
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css");
+@import url("custone.min.css");
+@import url("non-responsive.css");
+
+/* Another non-responsive overrides */
+.navbar-brand {
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 16px;
+}
+.navbar-nav > li > a {
+  padding: 20px 15px;
+}
+.caret {
+  margin-left: 5px;
+}
+.lead {
+  font-size: 18px;
+}
+.top {
+  margin-bottom: 20px;
+}
+.input-group .btn {
+  padding-top: 13px;
+  padding-bottom: 13px;
+}
+
+/* Font Awesome hacks */
+.nav .fa, .btn .fa {
+  margin-right: 5px;
+}
+
+/* General styles */
+body {
+  min-width: 980px;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.container {
+  width: 980px;
+  max-width: none !important;
+}
+
+
+/* Fix for first .page-header headings */
+h1.first.page-header {
+  margin-top: .25em;
+}
+h2.first.page-header {
+  margin-top: .33333333em;
+}
+h3.first.page-header {
+  margin-top: .4em;
+}
+
+
+/* Unordered List hack inside popovers */
+.popover ul {
+  list-style-type: square;
+  padding-left: 15px;
+}
+
+
+/* http://codepen.io/cuplizian/pen/GCihx */
+.panel-item {
+  box-sizing: border-box;
+  position: relative;
+  display: inline-block;
+  width: 30%;
+  height: 160px;
+  margin: 10px;
+  font-size: 32px;
+  font-weight: 400;
+  color: #fff;
+  overflow: hidden;
+  border-radius: 8px;
+}
+.panel-item a {
+  position: relative;
+  display: block;
+  padding: 25px;
+  color: #fff;
+  text-decoration: none;
+  z-index: 2;
+}
+.panel-item a span {
+  display: block;
+  font-size: 96px;
+  font-weight: 300;
+  line-height: .8em;
+}
+.panel-item:after {
+  position: absolute;
+  font-family: FontAwesome;
+  color: #000000;
+  z-index: 1;
+  transition: all .5s;
+  line-height: normal;
+}
+.panel-item.-barang {
+  background-color: #b8aa0e;
+}
+.panel-item.-barang:after {
+  content: "\f1b3";
+  font-size: 160px;
+  color: #a5980d;
+  top: 60px;
+  right: 0;
+}
+.panel-item.-barang:hover:after {
+  top: 25px;
+}
+.panel-item.-supplier {
+  background-color: #0377c0;
+}
+.panel-item.-supplier:after {
+  content: "\f0b1";
+  font-size: 180px;
+  color: #036bac;
+  top: 65px;
+  right: 15px;
+}
+.panel-item.-supplier:hover:after {
+  top: 25px;
+}
+.panel-item.-pelanggan {
+  background-color: #279824;
+}
+.panel-item.-pelanggan:after {
+  content: "\f07a";
+  font-size: 180px;
+  color: #238820;
+  top: 45px;
+  right: 12px;
+}
+.panel-item.-pelanggan:hover:after {
+  top: 5px;
+}
